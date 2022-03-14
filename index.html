@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Covid Clearance</title>
+  <link rel="stylesheet" href="style.css" type="text/css">
+
+</head>
+
+<body>
+
+  <div id="container">
+
+    <form class="input" id="users" onsubmit="return addRow();">
+      <div class="first-name">
+        <label for="firstname">First Name:</label>
+        <input required type="text" name="firstname" id="first-name" placeholder="Enter your first name">
+      </div>
+      <div class="last-name">
+        <label for="lastname">Last Name:</label>
+        <input required type="text" name="lastname" id="last-name" placeholder="Enter your last name">
+      </div>
+      <div class="email">
+        <label for="email">Email Address:</label>
+        <input required type="email" name="email" id="email" placeholder="Enter your email">
+      </div>
+      <div class="gender">
+        <label for="">Gender:</label>
+        <select required name="gender" id="gender">
+          <option value="" selected>Select Your Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+      </div>
+      <div class="travel form checkbox ">
+        <input type="checkbox" name="travel-status" id="travel" checked value="Yes" onchange="checkBoxStatus(this)">
+        <span for="checkbox">
+          Recently came into Nigeria within the last 14 days?</span>
+      </div>
+
+      <div class="submit form">
+        <button type="submit" class="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+
+    <div id="container2">
+    <form class="input" id="users2">
+      <div class="first-name">
+        <label for="firstname">First Name:</label>
+        <input required type="text" name="firstname" id="first-name2">
+      </div>
+      <div class="last-name">
+        <label for="lastname">Last Name:</label>
+        <input required type="text" name="lastname" id="last-name2" placeholder="Enter your last name">
+      </div>
+      <div class="email">
+        <label for="email">Email Address:</label>
+        <input required type="email" name="email" id="email2">
+      </div>
+      <div class="gender">
+        <label for="">Gender:</label>
+        <select required name="malefemale" id="gender2">
+          <option value="" selected>Select Your Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+      </div>
+      <div class="travel form checkbox ">
+        <input type="checkbox" name="travel-status" id="travel2" checked onchange="checkBoxStatus(this)">
+        <span for="checkbox">
+          Recently came into Nigeria within the last 14 days?</span>
+      </div>
+
+      <div class="submit form">
+        <button type="submit" class="submit">Update</button>
+      </div>
+    </form>
+  </div>
+    
+    
+    <table id="tabel">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email address</th>
+          <th>Gender</th>
+          <th>Came to nigeria <br> within the last 14 days?</th>
+          <th></th>
+          <th></th>
+        </tr>
+
+      </thead>
+      <tbody class="table-body">
+      </tbody>
+    </table>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
